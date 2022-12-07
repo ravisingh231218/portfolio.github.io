@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css"/>
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+   </head>
+<body>
+
+  <nav>
+    <div class="heading">
+        <h1>Portfo<span>lio.</span></h1></a>
+    </div>
+    <ul>
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/skills.html">SKILLS</a></li>
+        <li><a href="/contact.html">CONTACT</a></li>
+    </ul>
+    </nav>
+
+ 
+
+      <!--Contact section start -->
+<section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title"><center>Contact me</center> </h2>
+      <div class="contact-content">
+        <div class="column left">
+          <div class="text"></div>
+          <p>We create and build websites and web pages by combining any number of visual design elements including text, photos, graphics, animations and videos. We create a brand new website or simply make updates to the design and layout of existing pages.</p>
+          <div class="icons">
+            <div class="row">
+              <i class="fa-solid fa-user"></i>
+              <div class="info" >
+                <div class="head">Name</div>
+                <div class="sub-title">Ravi kumar</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <div class="head">Address</div>
+                <div class="sub-title">Noida, U.P.</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">ravikumar181203@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="text">Message me</div>
+          <form onsubmit="Mail(); reset(); return false;">
+            <div class="fields">
+              <div class="field name">
+
+                <input type="text" placeholder="Name" id="name" required>
+              </div>
+              <div class="field email">
+                <input type="email" placeholder="Email" id="email" required>
+              </div>
+            </div>
+              <div class="field">
+                <input type="text" placeholder="Subject" id="subject" required>
+              </div>
+              <div class="field textarea">
+                  <textarea id="message" cols="30" rows="10" placeholder="Message.." required></textarea>
+              </div>
+              <div class="button">
+                <button type="submit">submit</button>
+              </div>
+            
+          </form>
+        </div>
+      </div>
+    </div> 
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed (".input", {
+            strings: ["MERN DEVELOPER"],
+        typeSpeed: 70,
+        backSpeed: 60,
+        loop: true
+        });
+    </script>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+  function Mail(){
+
+
+ let name = document.getElementById('name').value;
+ let email = document.getElementById('email').value;
+ let subject = document.getElementById('subject').value;
+ let message = document.getElementById('message').value;
+
+
+    Email.send({
+    
+    SecureToken : "34a65119-d651-4451-804f-124d47369f88",
+   
+    To : 'ravisingh231218@gmail.com',
+    From : "ravikumar181203@gmail.com",
+    Subject : "Mail from contact form",
+    Body : "name:" + name + "<br> email:" + email + "<br> subject:" + subject + "<br> message:" + message
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+  }
+ </script>
+
+
+
+</html>
